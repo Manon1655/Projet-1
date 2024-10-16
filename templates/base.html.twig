@@ -1,22 +1,21 @@
-  <!DOCTYPE html>
-  <html>
-      <head>
-          <meta charset="UTF-8">
-          <title>{% block title %}Ma musique{% endblock %}</title>
-          <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-
-          <link rel="stylesheet" href="https://bootswatch.com/5/vapor/bootstrap.min.css">
-          <link rel="stylesheet" href="{{asset('css/app.css')}}">
-          <script src="https://kit.fontawesome.com/2bcd4f9bb1.js" crossorigin="anonymous"></script>
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <title>{% block title %}Y🤍M{% endblock %}</title>
+      <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>☾★</text></svg>">
+        <link rel="stylesheet" href="https://bootswatch.com/5/journal/bootstrap.min.css">
+        <link rel="stylesheet" href="{{asset('css/app.css')}}">
+        <script src="https://kit.fontawesome.com/2bcd4f9bb1.js" crossorigin="anonymous"></script>
           
-          {% block stylesheets %}    {% endblock %}
-      <head>
+{% block stylesheets %}    {% endblock %}
+    <head>
       <body>
-      <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
-      <a class="navbar-brand" href=" {{path('accueil')}} ">Ma musique</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#dark" aria-controls="dark" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+        <a class="navbar-brand" href=" {{path('accueil')}} ">Y🤍M</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#dark" aria-controls="dark" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
       <div class="collapse navbar-collapse" id="dark">
         <ul class="navbar-nav me-auto">
@@ -35,14 +34,11 @@
             <a class="dropdown-item" href="{{path('admin_albums')}}">Gestion des Albums</a>
         </div>
     </li>
-    {% endif %}
-    
-  </ul>
+{% endif %}
+  
+</ul>
   <ul class="navbar-nav my-auto">
   {% if app.user %}
-   <li class="nav-item">
-    <img class="avatar supermini" src=" {{app.user.avatar}} " alt="photo de {{app.user.fullName}} ">
-    </li>
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"> {{app.user.fullName}}</a>
       <div class="dropdown-menu dropdown-menu-right">
